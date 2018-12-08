@@ -34,10 +34,8 @@ public class MoviesActivity extends AppCompatActivity {
     private List<String> getData(){
         List<String> ninaList = new ArrayList<>();
         for (int i = 0; i < 15; i++) {
-            ninaList.add(i+1 + ". Ova e tekst.");
-
+            ninaList.add(new String(i+1 + ". Ova e tekst."));
         }
-        System.out.println("This is the list:/n" + ninaList);
         return ninaList;
     }
 }

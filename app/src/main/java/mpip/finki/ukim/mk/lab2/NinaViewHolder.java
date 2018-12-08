@@ -19,6 +19,7 @@ public class NinaViewHolder extends RecyclerView.ViewHolder {
 
     public NinaViewHolder(@NonNull View itemView) {
         super(itemView);
+        textView = (TextView) itemView;
     }
 
 

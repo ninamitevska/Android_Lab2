@@ -6,6 +6,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import java.util.List;
 
@@ -30,7 +31,16 @@ public class NinaAdapter extends RecyclerView.Adapter<NinaViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull NinaViewHolder viewHolder, int i) {
         String dataToShow = data.get(i);
-        viewHolder.getTextView().setText(dataToShow);
+        TextView txt = viewHolder.getTextView();
+        if (dataToShow == null) {
+            System.out.println("The text is null?? somehow");
+        }
+        if (txt == null){
+            System.out.println("The TextView is null.");
+        }
+        else {
+            txt.setText(dataToShow);
+        }
 
     }
 
